@@ -32,15 +32,7 @@ class CppPubNode : public rclcpp::Node
 
             m_publisher->publish(msg);
 
-            RCLCPP_INFO_STREAM(this->get_logger(),
-                "Publishing Sphere:\n"
-                << "  Header:\n"
-                << "    stamp = " << msg.header.stamp.sec << "." << msg.header.stamp.nanosec << "\n"
-                << "    frame_id = " << msg.header.frame_id << "\n"
-                << "  Center:\n"
-                << "    x = " << msg.center.x << ", y = " << msg.center.y << ", z = " << msg.center.z << "\n"
-                << "  Radius = " << msg.radius
-            );
+            RCLCPP_INFO_STREAM(this->get_logger(), "Sphere Message Published!");
         }
 
         rclcpp::Publisher<my_msgs_pkg::msg::Sphere>::SharedPtr m_publisher;

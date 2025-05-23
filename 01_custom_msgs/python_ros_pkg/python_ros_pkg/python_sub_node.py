@@ -16,7 +16,7 @@ class PythonSubNode(Node):
 
     def listener_callback(self, msg):
         self.get_logger().info(
-            f'Received Sphere:\n'
+            f'Received Sphere Message:\n'
             f'  stamp = {msg.header.stamp.sec}.{msg.header.stamp.nanosec}\n'
             f'  frame_id = {msg.header.frame_id}\n'
             f'  center = ({msg.center.x}, {msg.center.y}, {msg.center.z})\n'

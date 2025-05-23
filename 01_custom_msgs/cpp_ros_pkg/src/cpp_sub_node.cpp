@@ -17,7 +17,7 @@ class CppSubNode : public rclcpp::Node
         void callback(const my_msgs_pkg::msg::Sphere::SharedPtr msg)
         {
             RCLCPP_INFO_STREAM(this->get_logger(),
-                "Received Sphere:\n"
+                "Received Sphere Message!\n"
                 << "  Header:\n"
                 << "    stamp = " << msg->header.stamp.sec << "." << msg->header.stamp.nanosec << "\n"
                 << "    frame_id = " << msg->header.frame_id << "\n"

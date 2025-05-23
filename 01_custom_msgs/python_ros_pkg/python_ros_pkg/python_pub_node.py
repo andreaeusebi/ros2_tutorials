@@ -18,14 +18,9 @@ class PythonPubNode(Node):
         msg.center = Point(x=1.0, y=2.0, z=3.0)
         msg.radius = 0.5
 
-        self.get_logger().info(
-            f'Publishing Sphere:\n'
-            f'  stamp = {msg.header.stamp.sec}.{msg.header.stamp.nanosec}\n'
-            f'  frame_id = {msg.header.frame_id}\n'
-            f'  center = ({msg.center.x}, {msg.center.y}, {msg.center.z})\n'
-            f'  radius = {msg.radius}'
-        )
         self.publisher_.publish(msg)
+
+        self.get_logger().info('Sphere Message Published!')
 
 def main(args=None):
     rclpy.init(args=args)
