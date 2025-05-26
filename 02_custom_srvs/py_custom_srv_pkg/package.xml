@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>py_custom_srv_pkg</name>
+  <version>0.0.0</version>
+  <description>Python client and server for a custom service</description>
+  <maintainer email="andrea@example.com">andrea</maintainer>
+  <license>Apache License 2.0</license>
+
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>my_srvs_pkg</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
